@@ -14,7 +14,31 @@ body {
 }
 
 .title {
-    color: #333;
+        background:linear-gradient(
+          53deg,
+          hsl(285.91, 100%, 45.1%) 0%,
+          hsl(286.02, 94.52%, 46.07%) 8.8%,
+          hsl(287.15, 89.39%, 46.45%) 16.7%,
+          hsl(289.36, 84.43%, 46.29%) 24%,
+          hsl(292.78, 79.48%, 45.63%) 30.8%,
+          hsl(297.7, 74.43%, 44.5%) 37%,
+          hsl(304.26, 70.66%, 45.2%) 43%,
+          hsl(311.55, 68.18%, 47.12%) 48.7%,
+          hsl(319.3, 66.15%, 48.96%) 54.3%,
+          hsl(327.4, 66.26%, 50.68%) 59.9%,
+          hsl(335.73, 69.05%, 52.23%) 65.6%,
+          hsl(344.24, 71.69%, 53.58%) 71.6%,
+          hsl(352.91, 74.02%, 54.69%) 77.9%,
+          hsl(1.66, 76.4%, 54.58%) 84.6%,
+          hsl(9.05, 79.89%, 50.07%) 92%,
+          hsl(14.87, 100%, 45.1%) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+
     font-family: "Chakra Petch", sans-serif;
     font-weight: 700;
     font-size: 50px;
@@ -22,6 +46,93 @@ body {
 }
 
 .ButtonMp3 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .ButtonMp3:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,  
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingButtonMp3 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @keyframes glowingBut.ButtonMp3 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .ButtonMp3:active {
+    color: #000;
+  }
+  
+  .ButtonMp3:active:after {
+    background: transparent;
+  }
+  
+  .ButtonMp3:hover:before {
+    opacity: 1;
+  }
+  
+  .ButtonMp3:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+
+/* .ButtonMp3 {
     background-color: #007bff;
     color: white;
     border: none;
@@ -32,7 +143,7 @@ body {
     font-size: 16px;font-family: "Chakra Petch", sans-serif;
     font-weight: 700;
     font-style: normal;
-}
+} */
 
 
 .ButtonMp4 {
@@ -49,11 +160,3 @@ body {
     font-style: normal;
 }
 
-.ButtonMp3:hover {
-    background-color: #0056b3;
-}
-
-
-.ButtonMp4:hover {
-    background-color: #b32100;
-}
