@@ -1,31 +1,28 @@
 {
-    "manifest_version": 3,
-    "name": "YouTube Video Downloader",
-    "version": "1.0",
-    "description": "Download YouTube videos as MP3 or MP4.",
-    "icons": {
-      "48": "icon.png"
-    },
-    "permissions": [
+  "manifest_version": 3,
+  "name": "YouTube Video Downloader",
+  "version": "1.0",
+  "description": "Download YouTube videos as MP3 or MP4.",
+  "icons": {
+      "128": "icons/128.png"
+  },
+  "permissions": [
       "activeTab",
       "downloads"
-    ],
-    "background": {
+  ],
+  "background": {
       "service_worker": "background.js"
-    },
-    "action": {
+  },
+  "action": {
       "default_popup": "popup.html",
       "default_icon": {
-        "16": "icon16.png",
-        "48": "icon48.png",
-        "128": "icon128.png"
+          "128": "icons/128.png"
       }
-    },
-    "content_scripts": [
+  },
+  "content_scripts": [
       {
-        "matches": ["*://*.youtube.com/watch*"],
-        "js": ["content_script.js"]
+          "matches": ["*://*.youtube.com/watch*"],
+          "js":["content.js"]
       }
-    ]
-  }
-  
+  ]
+}
