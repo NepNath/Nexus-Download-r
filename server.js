@@ -17,9 +17,15 @@ app.get('/download-mp4', (req, res) => {
   }
 
   youtubedl(url, {
-    format: 'bestvideo'
+    format: 'bestvideo',
+    dumpSingleJson: true,
+    noWarnings: true,
+    noCallHome: true,
+    noCheckCertificate: true,
+    preferFreeFormats: true,
+    youtubeSkipDashManifest: true
   }).then(output => {
-    res.json({url: output.url})
+    res.json({ url: output.url, title: output.title });
   }).catch(err => {
     res.status(500).send('Failed to download video');
   });
@@ -33,13 +39,19 @@ app.get('/download-mp3', (req, res) => {
     }
   
     youtubedl(url, {
-      format: 'bestaudio'
-    }).then(output => {
-      res.json({url: output.url});
-    }).catch(err => {
-      res.status(500).send('Failed to download video');
+        format: 'bestaudio',
+        dumpSingleJson: true,
+        noWarnings: true,
+        noCallHome: true,
+        noCheckCertificate: true,
+        preferFreeFormats: true,
+        youtubeSkipDashManifest: true
+      }).then(output => {
+        res.json({ url: output.url, title: output.title });
+      }).catch(err => {
+        res.status(500).send('Failed to download video');
+      });
     });
-  });
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
