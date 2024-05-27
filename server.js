@@ -6,7 +6,7 @@ const app = express();
 const port = 4000;
 
 app.use(cors({
-  origin: 'chrome-extension://opnlomakpnoffilmacbapoefgplmjoab'
+  origin: 'chrome-extension://dohbggmomelggkmmegdmmhjmbepdbfmd'
 }));
 
 app.get('/download-mp4', (req, res) => {
@@ -16,7 +16,7 @@ app.get('/download-mp4', (req, res) => {
   }
 
   youtubedl(url, {
-    format: 'bestvideo+bestaudio',
+    format: 'bestvideo',
     mergeOutputFormat: 'mp4'
   }).then(output => {
     res.json({ url: output.url, title: output.title });

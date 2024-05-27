@@ -14,7 +14,7 @@ document.getElementById('download-mp4').addEventListener('click', function() {
                 const blobUrl = URL.createObjectURL(blob);
                 const downloadLink = document.createElement('a');
                 downloadLink.href = blobUrl;
-                downloadLink.download = json.title.replace(/[^a-zA-Z0-9]/g, '_') + '.mp4';
+                downloadLink.download = json.title.replace(/[^a-zA-Z0-9]/g, '_');
                 document.body.appendChild(downloadLink);
                 downloadLink.click();
                 document.body.removeChild(downloadLink);
@@ -48,10 +48,10 @@ document.getElementById('download-mp4').addEventListener('click', function() {
           })
           .then(json => {
             if (json.url && json.title) {
-              document.getElementById('title').textContent = json.title; // Affiche le titre de la vidéo
+              document.getElementById('title').textContent = json.title; 
               const a = document.createElement('a');
               a.href = json.url;
-              a.download = json.title.replace(/[^a-zA-Z0-9]/g, '_') + '.mp3'; // Crée un nom de fichier valide
+              a.download = json.title.replace(/[^a-zA-Z0-9]/g, '_'); 
               document.body.appendChild(a);
               a.click();
               document.body.removeChild(a);
