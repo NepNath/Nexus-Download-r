@@ -45,6 +45,7 @@ en premier, naviguez jusqu'au dossier du projet :
 cd chemin/vers/le/dossier/du/projet
 ```
 ![path2folder](IMG/path2folder.png)
+
 une fois dedans, exécuter la commande suivante pour lancer le serveur local :
 
 ```bash
