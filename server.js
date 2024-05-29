@@ -16,8 +16,8 @@ app.get('/download-mp4', (req, res) => {
   }
 
   youtubedl(url, {
-    format: 'bestvideo',
-    mergeOutputFormat: 'mp4'
+    format: 'best',
+    mergeOutputFormat: 'mp4',
   }).then(output => {
     res.json({ url: output.url, title: output.title });
   }).catch(err => {
@@ -33,8 +33,8 @@ app.get('/download-mp3', (req, res) => {
 
   youtubedl(url, {
     format: 'bestaudio',
+    mergeOutputFormat: 'mp3',
     extractAudio: true,
-    audioFormat: 'mp3'
   }).then(output => {
     res.json({ url: output.url, title: output.title });
   }).catch(err => {

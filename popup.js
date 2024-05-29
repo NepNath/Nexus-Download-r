@@ -42,6 +42,7 @@ document.getElementById('download-mp4').addEventListener('click', function() {
         fetch(`http://localhost:4000/download-mp3?url=${encodeURIComponent(url)}`)
           .then(response => {
             if (!response.ok) {
+              console.log(response)
               throw new Error('Failed to start download');
             }
             return response.json();
