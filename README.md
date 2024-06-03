@@ -6,20 +6,20 @@
 Nexus Download'r est une extension de navigateur fonctionnant sous chromium conçue pour faciliter le téléchargement de vidéos et d'audios depuis YouTube. Elle permet aux utilisateurs de télécharger des médias directement via leur navigateur sans passer par des sites externes sous le format `.webm` avec une facilité accrue.
 
 ## Fonctionnalités
-- Téléchargement de vidéos et d'audio en format webm.
+- Téléchargement de vidéos en format mp4 et d'audio en format webm.
 - Interface utilisateur intuitive et simple a comprendre.
 
 ## Configuration Requise
 - Google Chrome ou tout navigateur basé sur Chromium.
 - Accès à Internet pour récupérer les vidéos depuis YouTube.
 - Serveur local lancé (server.js) (*v1.0 de l'extension*)
-- Node.js installé sur votre machine (*v1.0 de l'extension*)
+- Node.js installé sur votre machine (*v1.0 de l'extension*) ([télécharger Node.js](https://nodejs.org/dist/v20.14.0/node-v20.14.0-x64.msi))
 
 ## Installation
 Pour installer cette extension dans votre navigateur Chrome, suivez ces étapes :
 
 1. Clonez le dépôt ou téléchargez le ZIP de ce projet.
-2. Extrayez le dossier si vous avez téléchargé le ZIP.
+2. Extrayez le dossier si vous avez téléchargé le ZIP, dans un endroit facile d'accès pour faciliter l'utilisation.
 3. Ouvrez votre navigateur et allez dans `chrome://extensions/`.
 4. Activez le mode développeur.
 5. Cliquez sur "Charger l'extension non empaquetée" et sélectionnez le dossier de l'extension extrait.
@@ -32,7 +32,7 @@ Pour utiliser Nexus Download'r, procédez comme suit :
 1. Naviguez sur YouTube et ouvrez la vidéo que vous souhaitez télécharger.
 2. Cliquez sur l'icône de Nexus Download'r dans la barre d'outils de votre navigateur pour ouvrir la popup.
 3. Cliquez sur le bouton correspondant au format que vous souhaitez télécharger.
-4. La vidéo sera téléchargée après un court moment dans le dossier du projet.
+4. La vidéo sera téléchargée après un court moment dans le **dossier du projet**.
 
 ## Installation Serveur
 
